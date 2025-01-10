@@ -16,7 +16,7 @@ app.use(express.json());
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/taskmanager', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
