@@ -156,6 +156,10 @@ app.put('/api/tasks/:id', auth, async (req, res) => {
   }
 });
 
+app.get('/api', (req, res) => {
+  res.send('Hello World!');
+});
+
 app.delete('/api/tasks/:id', auth, async (req, res) => {
   try {
     const task = await Task.findOneAndDelete({
