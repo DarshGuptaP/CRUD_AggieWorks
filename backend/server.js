@@ -60,6 +60,7 @@ const auth = async (req, res, next) => {
 // Auth Routes
 app.post('/api/register', async (req, res) => {
   try {
+    console.log("/api/register")
     const { email, password, name } = req.body;
     
     // Validate input
@@ -158,6 +159,7 @@ app.put('/api/tasks/:id', auth, async (req, res) => {
 
 app.get('/api', (req, res) => {
   res.send('Hello World!');
+  console.log("/api")
 });
 
 app.delete('/api/tasks/:id', auth, async (req, res) => {
