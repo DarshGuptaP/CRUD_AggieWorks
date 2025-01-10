@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CheckCircle2, Circle, Trash2, LogOut } from "lucide-react";
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 interface Task {
   _id: string;
